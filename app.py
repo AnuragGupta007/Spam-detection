@@ -17,4 +17,5 @@ def predict():
     result = model.predict(data)[0]
     return jsonify({"prediction": "Spam" if result == 1 else "Not Spam"})
 
-# app.run(debug=True)
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000)
